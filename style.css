@@ -1,0 +1,30 @@
+body {
+  font-family: Trattatello, fantasy;
+  font-weight: 300;
+}
+
+#container {
+  width: 1000px;
+  margin: auto;
+  margin-top: 50%;
+  /* color: #222222; */
+}
+
+.meal-card {
+  float: left;
+  width: 250%;
+  margin: auto;
+}
+
+.meal-frame {
+  /* width: 230%; */
+  /* margin: 10%; */
+  background: #222222;
+  color: gray;
+}
+
+img#meal-logo {
+  width: 100%;
+  margin: auto;
+  size: 20%;
+}
