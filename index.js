@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 function renderAllDishes(foodObj){
-    // console.log(foodObj)
+    // console.log(Object.keys(foodObj).length)
     let divContainer = document.createElement('div')
     let divFrame = document.createElement('div')
     let divImage = document.createElement('div')
@@ -44,16 +44,29 @@ function renderAllDishes(foodObj){
     
     // Event Listeners
     divImage.addEventListener('mouseover', (e) => {
+        // if (!divImage.style.opacity == '0.5') {
+        //     divImage.style.opacity = '0.5'
+        // } else {
+        //     divImage.style.opacity = '1'
+        // }
         divImage.style.cursor = 'pointer'
+        // divImage.style.opacity = '0.5'
+        // divImage.style.opacity = '1'
     })
 
-    divImage.addEventListener('click', () => {
-        divFrame.append(h1Discription) 
+    divImage.addEventListener('click', (e) => {
+        // debugger
+        if (!e.target.parentElement.parentElement.querySelector("h2")) { 
+            divFrame.append(h1Discription) 
+        } else{
+            e.target.parentElement.parentElement.querySelector("h2").remove()
+        }
+        // debugger
     })
 
-    document.querySelector('button.like-button').addEventListener('click', () => {
+    likeLogo.addEventListener('click', (e) => {
         foodLikes += 1
-        document.querySelector('span.likes').textContent = `${foodLikes} likes`
+        likes.textContent = `${foodLikes} likes`
     })
 }
 

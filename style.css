@@ -1,5 +1,5 @@
 body {
-  font-family: Trattatello, fantasy;
+  font-family: fantasy;
   font-weight: 300;
 }
 
@@ -21,8 +21,8 @@ body {
     /* width: 230%; */
     /* margin: 10%; */
     /* background: #222222; */
-    background: #222222;
-    color: gray;
+    background: whitesmoke;
+    color: #222222;
 }
 
 img#meal-logo {
