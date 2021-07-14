@@ -4,27 +4,68 @@ body {
 }
 
 #container {
-  width: 1000px;
+  width: 100%;
   margin: auto;
-  margin-top: 50%;
+  margin-top: 2%;
   /* color: #222222; */
 }
 
 .meal-card {
   float: left;
-  width: 250%;
+  width: 100%;
   margin: auto;
 }
 
+
 .meal-frame {
-  /* width: 230%; */
-  /* margin: 10%; */
-  background: #222222;
-  color: gray;
+    /* width: 230%; */
+    /* margin: 10%; */
+    /* background: #222222; */
+    background: #222222;
+    color: gray;
 }
 
 img#meal-logo {
-  width: 100%;
-  margin: auto;
-  size: 20%;
+    width: 100%;
+    margin: auto;
+    size: 20%;
+}
+
+.meal-image img{
+    width: 100%;
+}
+
+
+/* like section */
+.likes-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.likes {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.like-button {
+  color: rgb(255, 127, 80);
+  font-size: 2rem;
+  border: none;
+  background: none;
+  transition: color 300ms;
+  cursor: pointer;
+}
+
+.like-button:hover {
+  color: rgb(241, 71, 19);
+}
+
+.like-button:active {
+  color: rgb(253, 159, 124);
+}
+
+.like-button:focus {
+  outline: none;
 }
