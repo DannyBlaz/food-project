@@ -1,10 +1,11 @@
 body {
   font-family: fantasy;
   font-weight: 300;
+  background: #222222;
 }
 
 #container {
-  width: 100%;
+  width: 80%;
   margin: auto;
   margin-top: 2%;
   /* color: #222222; */
@@ -20,9 +21,9 @@ body {
 .meal-frame {
     /* width: 230%; */
     /* margin: 10%; */
-    /* background: #222222; */
-    background: whitesmoke;
-    color: #222222;
+    background: #282727;
+    /* background: whitesmoke; */
+    color: whitesmoke;
 }
 
 img#meal-logo {
