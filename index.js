@@ -2,9 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchAllDishes()
 })
 
-
 function renderAllDishes(foodObj){
-    // console.log(Object.keys(foodObj).length)
     let divContainer = document.createElement('div')
     let divFrame = document.createElement('div')
     let divImage = document.createElement('div')
@@ -43,28 +41,19 @@ function renderAllDishes(foodObj){
     document.querySelector('#meal-container').append(divContainer)
     
     // Event Listeners
-    divImage.addEventListener('mouseover', (e) => {
-        // if (!divImage.style.opacity == '0.5') {
-        //     divImage.style.opacity = '0.5'
-        // } else {
-        //     divImage.style.opacity = '1'
-        // }
+    divImage.addEventListener('mouseover', () => {
         divImage.style.cursor = 'pointer'
-        // divImage.style.opacity = '0.5'
-        // divImage.style.opacity = '1'
     })
 
     divImage.addEventListener('click', (e) => {
-        // debugger
         if (!e.target.parentElement.parentElement.querySelector("h2")) { 
             divFrame.append(h1Discription) 
         } else{
             e.target.parentElement.parentElement.querySelector("h2").remove()
         }
-        // debugger
     })
 
-    likeLogo.addEventListener('click', (e) => {
+    likeLogo.addEventListener('click', () => {
         foodLikes += 1
         likes.textContent = `${foodLikes} likes`
     })
@@ -73,7 +62,6 @@ function renderAllDishes(foodObj){
 function fetchAllDishes(){
     fetch("https://www.themealdb.com/api/json/v1/1/categories.php")
         .then(res => res.json())
-        // .then(json => console.log(json))
         .then(json => json.categories.forEach(renderAllDishes))
 }
 
